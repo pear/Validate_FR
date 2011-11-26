@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Validate_FR</name>
  <channel>pear.php.net</channel>
  <summary>Validation class for FR</summary>
@@ -12,9 +9,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
  * RIB
  * SIREN
  * SIRET
- * Region (Departements)
-  
- </description>
+ * Region (Departements)</description>
  <lead>
   <name>Christophe Gesché</name>
   <user>moosh</user>
@@ -27,8 +22,8 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>toggg@php.net</email>
   <active>no</active>
  </lead>
- <date>2009-09-21</date>
- <time>01:14:06</time>
+ <date>2011-11-26</date>
+ <time>21:48:34</time>
  <version>
   <release>0.6.0</release>
   <api>0.6.0</api>
@@ -39,23 +34,19 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license>New BSD</license>
  <notes>
- QA release
- - release in beta
- - Moosh take lead
- - Updated to package 2.0 (doconnor)
+QA release
+- release in beta
+- Moosh take lead
+- Updated to package 2.0 (doconnor)
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <dir name="tests">
-    <file name="bug7389.phpt" role="test" />
-    <file name="validate_FR.phpt" role="test" />
-    <file name="validate_functions.inc" role="test" />
-   </dir> <!-- /tests -->
-   <dir name="Validate">
-    <file name="FR.php" role="php" />
-   </dir> <!-- /Validate -->
-   <file name="LICENSE" role="doc" />
-  </dir> <!-- / -->
+   <file baseinstalldir="/" md5sum="a6e5e1fa262cec1672a95b772840f595" name="tests/bug7389.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="17beabf678e268d74e788c032209ced2" name="tests/validate_FR.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="01b1d404c268df4e9f5341e41dea2954" name="tests/validate_functions.inc" role="test" />
+   <file baseinstalldir="/" md5sum="680fa380770ecadae0c6f641d2d0bb01" name="Validate/FR.php" role="php" />
+   <file baseinstalldir="/" md5sum="f8790e48b597dff12a643e08e9be3fab" name="LICENSE" role="doc" />
+  </dir>
  </contents>
  <dependencies>
   <required>
@@ -76,16 +67,23 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <changelog>
   <release>
    <version>
-    <release>0.5.2</release>
-    <api>0.5.2</api>
+    <release>0.5.0</release>
+    <api>0.5.0</api>
    </version>
    <stability>
     <release>alpha</release>
     <api>alpha</api>
    </stability>
-   <date>2006-04-18</date>
+   <date>2005-05-20</date>
    <license>New BSD</license>
-   <notes>- bug #7389, DOM/TOM and some regions are not recognized
+   <notes>
+- Split from Validate into independent package
+- CS fixes
+- BC break!
+postalCode unified between countries (name wise), now all postcode validation funcs are named postalCode
+- added region() (departments) and postalCode
+- fixed rib calculation
+- bertrand Gugger added as lead/maintainer
    </notes>
   </release>
   <release>
@@ -99,30 +97,42 @@ http://pear.php.net/dtd/package-2.0.xsd">
    </stability>
    <date>2005-11-04</date>
    <license>New BSD</license>
-   <notes>- Switch to the new BSD License
+   <notes>
+- Switch to the new BSD License
 (see http://www.opensource.org/licenses/bsd-license.php)
-    
    </notes>
   </release>
   <release>
    <version>
-    <release>0.5.0</release>
-    <api>0.5.0</api>
+    <release>0.5.2</release>
+    <api>0.5.2</api>
    </version>
    <stability>
     <release>alpha</release>
     <api>alpha</api>
    </stability>
-   <date>2005-05-20</date>
+   <date>2006-04-18</date>
    <license>New BSD</license>
-   <notes>- Split from Validate into independent package
-- CS fixes
-- BC break!
-postalCode unified between countries (name wise), now all postcode validation funcs are named postalCode
-- added region() (departments) and postalCode
-- fixed rib calculation
-- bertrand Gugger added as lead/maintainer
-    
+   <notes>
+- bug #7389, DOM/TOM and some regions are not recognized
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.6.0</release>
+    <api>0.6.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2011-11-26</date>
+   <license>New BSD</license>
+   <notes>
+QA release
+- release in beta
+- Moosh take lead
+- Updated to package 2.0 (doconnor)
    </notes>
   </release>
  </changelog>
