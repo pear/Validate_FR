@@ -1,0 +1,36 @@
+{
+    "authors": [
+        {
+            "email": "moosh@php.net",
+            "name": "Christophe Gesch\u00e9",
+            "role": "Lead"
+        },
+        {
+            "email": "toggg@php.net",
+            "name": "bertrand Gugger",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Validate_FR": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/Validate_FR",
+    "include-path": [
+        "./"
+    ],
+    "license": "New BSD",
+    "name": "pear/validate_fr",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Validate_FR",
+        "source": "https://github.com/pear/Validate_FR"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
